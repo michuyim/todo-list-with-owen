@@ -10,11 +10,11 @@ router.get('/tasks', controller.getAll); // Get all tasks
 
 router.get('/tasks/:id', controller.getById); // Get task by ID
 
-router.post('/add-task', validateToDoList, ToDoListValidator, controller.newTask); // Add new task
+router.post('/new-task', validateToDoList, ToDoListValidator, controller.newTask); // Add new task
 
 router.put('/tasks/:id', validateToDoList, ToDoListValidator, controller.updateTasks); // Update task by ID
 
-router.delete('/tasks/:id', controller.deleteTask); // Delete task by ID
+router.delete('/tasks/:id/del', controller.deleteTask); // Delete task by ID
 
 router.put('/tasks/:id/done', controller.markDone); // Mark task as done by ID
 
